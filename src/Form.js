@@ -23,15 +23,15 @@ class Form extends Component {
     }
 
     handleClick = () => {
-        const {id, make, model, year, description, price} = this.state
+        const {make, model, year, description, price} = this.state
         let newCar = {
-            id,
             price,
             make,
             model,
             year,
             description
     }
+    this.props.create(newCar)
 
 }
 
@@ -75,6 +75,8 @@ class Form extends Component {
                     placeholder='description'
                     onChange={this.handleChange} />
                     <button onClick={this.handleClick}>Add</button>
+                    <button onClick={this.handleClick}>delete</button>
+
 
             </div>
         )

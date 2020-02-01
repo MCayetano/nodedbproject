@@ -62,7 +62,7 @@ class App extends Component {
     
     return (
       <div>
-        <Form />
+        <Form create={this.createVehicle}/>
         <div>{mappedInventory}</div>
         
       </div>
