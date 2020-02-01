@@ -12,6 +12,14 @@ class App extends Component {
     }
   }
 
+  getCars = () => {
+    axios.get('/api/inventory').then(res=> {
+      this.setState({
+        inventory: res.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>

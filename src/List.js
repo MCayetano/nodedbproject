@@ -4,6 +4,7 @@ function List(props) {
     const {id, make, model, year, description, price} = this.state
     return (
         <div>
+            <p>{id}</p>
             <p>{make}</p>
             <p>{model}</p>
             <p>{year}</p>
