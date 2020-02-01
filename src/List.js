@@ -1,15 +1,15 @@
 import React from 'react';
 
 function List(props) {
-    const {id, make, model, year, description, price} = this.state
+    const {inventory} = props
     return (
         <div>
-            <p>{id}</p>
-            <p>{make}</p>
-            <p>{model}</p>
-            <p>{year}</p>
-            <p>{price}</p>
-            <p>{description}</p>
+            <p>{inventory.id}</p>
+            <p>{inventory.make}</p>
+            <p>{inventory.model}</p>
+            <p>{inventory.year}</p>
+            <p>{inventory.price}</p>
+            <p>{inventory.description}</p>
         </div>
     )
 }

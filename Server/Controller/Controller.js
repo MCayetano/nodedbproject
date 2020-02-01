@@ -22,8 +22,8 @@ let inventory = [
 ]
 
 module.exports = {
-    getCars: (req, res) => {
-        res.status(200).send(inventory)
+    getCars: (req, response) => {
+        response.status(200).send(inventory)
     },
 
     soldCars: (req, res) => {
