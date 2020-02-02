@@ -1,24 +1,24 @@
 let id = 2;
 
 let inventory = [
-    // {
-    //     id: 0,
-    //     price: '$119,995',
-    //     make: 'Bentley',
-    //     model: 'Continental',
-    //     year: 2015,
-    //     description: 'Test',
+    {
+        id: 0,
+        price: '$119,995',
+        make: 'Bentley',
+        model: 'Continental',
+        year: 2015,
+        description: 'Test',
 
-    // },
+    },
 
-    // {
-    //     id: 1,
-    //     price: '$499,000',
-    //     make: 'Lamborghini',
-    //     model: 'Aventador SRoadster',
-    //     year: 2019,
-    //     description: 'Test',
-    // }
+    {
+        id: 1,
+        price: '$499,000',
+        make: 'Lamborghini',
+        model: 'Aventador SRoadster',
+        year: 2019,
+        description: 'Test',
+    }
 
 ]
 

@@ -30,9 +30,9 @@ class App extends Component {
   }
 
   soldCars = (id) => {
-    console.log("soldCars", id);
+    // console.log("soldCars", id);
     axios.delete(`/api/sold/${id}`).then(res =>{
-      console.log('inventory after delete', res.data);
+      // console.log('inventory after delete', res.data);
       this.setState({
         inventory: res.data
       })
