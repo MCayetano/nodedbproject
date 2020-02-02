@@ -1,23 +1,24 @@
 let id = 2;
+
 let inventory = [
-    {
-        id: 0,
-        price: '$119,995',
-        make: 'Bentley',
-        model: 'Continental',
-        year: 2015,
-        description: 'Test',
+    // {
+    //     id: 0,
+    //     price: '$119,995',
+    //     make: 'Bentley',
+    //     model: 'Continental',
+    //     year: 2015,
+    //     description: 'Test',
 
-    },
+    // },
 
-    {
-        id: 1,
-        price: '$499,000',
-        make: 'Lamborghini',
-        model: 'Aventador SRoadster',
-        year: 2019,
-        description: 'Test',
-    }
+    // {
+    //     id: 1,
+    //     price: '$499,000',
+    //     make: 'Lamborghini',
+    //     model: 'Aventador SRoadster',
+    //     year: 2019,
+    //     description: 'Test',
+    // }
 
 ]
 
@@ -27,14 +28,17 @@ module.exports = {
     },
 
     soldCars: (req, res) => {
-        let { id } = req.params;
-
-        let index = inventory.findIndex(elem => {
-            return +elem.id === +id
+        const {id} = req.params;
+        console.log('paramies', req.params);
+        let newInventory = inventory.filter(car => {
+            console.log('car.id', car.id);
+            console.log('id', id);
+            if(car.id !== +id) {
+                return car;
+            }
         })
-
-        inventory.splice(index, 1)
-        res.status(200).send(inventory)
+        
+        res.status(200).send(newInventory);
     },
 
     createVehicle: (req, res) => {

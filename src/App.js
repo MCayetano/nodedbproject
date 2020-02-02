@@ -9,7 +9,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      inventory: []
+      inventory: [],
+      price: ""
     }
   }
 
@@ -29,7 +30,9 @@ class App extends Component {
   }
 
   soldCars = (id) => {
-    axios.delete(`/api/sold/:id`).then(res =>{
+    console.log("soldCars", id);
+    axios.delete(`/api/sold/${id}`).then(res =>{
+      console.log('inventory after delete', res.data);
       this.setState({
         inventory: res.data
       })
@@ -45,23 +48,64 @@ class App extends Component {
   }
 
   updatePrice = (id, inventory) => {
-    axios.put(`/api/updatePrice/:id`, inventory).then(res =>{
+    axios.put(`/api/updatePrice/${id}`, inventory).then(res =>{
       this.setState({
         inventory: res.data
       })
     })
+}
+
+handleChange = e => {
+  let price = e.target.value;
+  this.setState ({
+      price : price
+  })
+}
+
+
+editCar = (e) => {
+  let indexValue = e.target.value
+  let index = this.state.inventory.findIndex(elem => {
+    return parseInt(elem.id) === parseInt(indexValue)
+  })
+
+  let curCar = this.state.inventory[index]
+
+  let updatedCar = {
+    id: curCar.id,
+    make: curCar.mqke,
+    model: curCar.model,
+    year: curCar.year,
+    price: this.state.price,
+    description: curCar.description
   }
+  this.updatePrice(index, updatedCar)
+  this.setState({
+    price: ""
+  })
+}
 
   render() {
     const mappedInventory = this.state.inventory.map(car => {
+      console.log(car.id, "id's of all cars")
       return (
-        <List inventory={car}
-        key={car.id} />
+        <div>
+          <List inventory={car}
+          key={car.id} />
+          <input placeholder="Price" value={this.state.price} onChange={this.handleChange}></input>
+          <button value={car.id} onClick={this.editCar}>Edit</button>
+          <button value={car.id} onClick={e => this.soldCars(e.target.value)}>Delete</button>
+        </div>
+
+
       )
     })
     
     return (
       <div>
+        <div className="container">
+
+        </div>
         <Form create={this.createVehicle}/>
         <div>{mappedInventory}</div>
         

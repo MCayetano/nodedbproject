@@ -75,7 +75,7 @@ class Form extends Component {
                     placeholder='description'
                     onChange={this.handleChange} />
                     <button onClick={this.handleClick}>Add</button>
-                    <button onClick={this.handleClick}>delete</button>
+                
 
 
             </div>
