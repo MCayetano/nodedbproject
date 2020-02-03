@@ -1,4 +1,4 @@
-let id = 2;
+let id = 4;
 
 let inventory = [
     {
@@ -7,7 +7,9 @@ let inventory = [
         make: 'Bentley',
         model: 'Continental',
         year: 2015,
-        description: 'Test',
+        description: "",
+        image: "https://www.manhattanmotorcars.com/images/2015_Bentley_Continental_PO2690_5.jpg"
+
 
     },
 
@@ -17,9 +19,30 @@ let inventory = [
         make: 'Lamborghini',
         model: 'Aventador SRoadster',
         year: 2019,
-        description: 'Test',
-    }
+        description: "",
+        image:"https://www.manhattanmotorcars.com/images/2019_Lamborghini_Aventador_191006_2.jpg"
+    },
+    
+    {
+        id: 2,
+        price: '$119,995',
+        make: 'Bentley',
+        model: 'Continental GT V8',
+        year:   2015,
+        description: "",
+        image: "https://www.manhattanmotorcars.com/images/2015_Bentley_Continental_PO2690_5.jpg"
+    },
 
+    {
+        id: 3,
+        price: '$378,500',
+        make: 'Lamborghini',
+        model: 'Aventador Roadster',
+        year: 2015,
+        description: "",
+        image: "https://www.manhattanmotorcars.com/images/2017_Lamborghini_Aventador_PO1959_2.jpg"
+
+    }
 ]
 
 module.exports = {

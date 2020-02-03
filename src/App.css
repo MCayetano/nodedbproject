@@ -1,18 +1,39 @@
 body {
-  background-color: orange;
+  background-color: whitesmoke;
 }
 
 .searchBar {
+  width: 900px;
+  border: 3px solid red;
   display: flex;
   align-items: left;
 
 }
-.price {
-  display: flex;
-  align-items: left;
-}
+
 
 .mmy {
   display: flex;
   align-items: left;
+}
+
+.Boarder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 06px solid silver;
+}
+
+.Image {
+  margin-right: 20px;
+  width: 300px;
+  float: right;
+  
+
+}
+
+
+
+.Text {
+
+
 }

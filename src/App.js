@@ -64,10 +64,13 @@ handleChange = e => {
 
 
 editCar = (e) => {
+  // console.log(e.target.value)
   let indexValue = e.target.value
   let index = this.state.inventory.findIndex(elem => {
     return parseInt(elem.id) === parseInt(indexValue)
   })
+
+  
 
   let curCar = this.state.inventory[index]
 
@@ -90,9 +93,9 @@ editCar = (e) => {
       console.log(car.id, "id's of all cars")
       return (
         <div>
-          <List inventory={car}
+          <List price={this.state.price} inventory={car} handleChange={this.handleChange}
           key={car.id} />
-          <input placeholder="Price" value={this.state.price} onChange={this.handleChange}></input>
+          {/* <input placeholder="Price" value={this.state.price} onChange={this.handleChange}></input> */}
           <button value={car.id} onClick={this.editCar}>Edit</button>
           <button value={car.id} onClick={e => this.soldCars(e.target.value)}>Delete</button>
         </div>
@@ -103,8 +106,8 @@ editCar = (e) => {
     
     return (
       <div>
-        <div className="container">
-
+        <div className="header">
+          <h1>Elite Auto Brokers</h1>
         </div>
         <Form create={this.createVehicle}/>
         <div>{mappedInventory}</div>
