@@ -107,9 +107,11 @@ editCar = (e) => {
     return (
       <div>
         <div className="header">
-          <h1>Elite Auto Brokers</h1>
+          <h1 className="Textheader">Elite Auto Brokers</h1>
         </div>
+        <div className="centerBar">
         <Form create={this.createVehicle}/>
+        </div>
         <div>{mappedInventory}</div>
         
       </div>

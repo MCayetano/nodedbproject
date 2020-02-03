@@ -41,17 +41,16 @@ class Form extends Component {
             <div className="searchBar">
 
 
-                <div className="Price"> 
+                <div className="mmy"> 
                 <input 
                     type='text'
                     name='price'
                     value={this.state.price}
                     placeholder='price'
                     onChange={this.handleChange} />
+ 
 
-                </div>
-
-                <div className= "mmy">
+                
                 
                 <input
                     type='text'
@@ -74,10 +73,10 @@ class Form extends Component {
                     value={this.state.year}
                     placeholder='year'
                     onChange={this.handleChange} />
-                    </div>
+                    
 
                     
-                    <div className="description">
+                
                     <input
                     type='text'
                     name='description'
@@ -85,7 +84,9 @@ class Form extends Component {
                     placeholder='description'
                     onChange={this.handleChange} />
                     <button onClick={this.handleClick}>Add</button>
+
                     </div>
+        
                 
 
 

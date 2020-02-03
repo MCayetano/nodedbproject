@@ -7,7 +7,7 @@ let inventory = [
         make: 'Bentley',
         model: 'Continental',
         year: 2015,
-        description: "",
+        description: "Elegant vehicle with Navigation, Rear-View Camera, Bang-Olufsen Sound System",
         image: "https://www.manhattanmotorcars.com/images/2015_Bentley_Continental_PO2690_5.jpg"
 
 
@@ -19,7 +19,7 @@ let inventory = [
         make: 'Lamborghini',
         model: 'Aventador SRoadster',
         year: 2019,
-        description: "",
+        description: "Rear-view Camera, Premium Sound System, ",
         image:"https://www.manhattanmotorcars.com/images/2019_Lamborghini_Aventador_191006_2.jpg"
     },
     
@@ -29,7 +29,7 @@ let inventory = [
         make: 'Bentley',
         model: 'Continental GT V8',
         year:   2015,
-        description: "",
+        description: "Convertible, CAR IS ON TEST DRIVE NOT IN BUILDING AT THE MOMENT",
         image: "https://www.manhattanmotorcars.com/images/2015_Bentley_Continental_PO2690_5.jpg"
     },
 
@@ -39,7 +39,7 @@ let inventory = [
         make: 'Lamborghini',
         model: 'Aventador Roadster',
         year: 2015,
-        description: "",
+        description: "CAR IS IN THE WASH BAY, CARLOS HAS THE KEYS",
         image: "https://www.manhattanmotorcars.com/images/2017_Lamborghini_Aventador_PO1959_2.jpg"
 
     }

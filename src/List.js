@@ -33,7 +33,7 @@ class List extends Component {
         ></input>
         </div>
         <div className="ImageDiv">
-        <img src={inventory.image} className="Image"/>
+        <img src={inventory.image} className="Image" alt="Vehicle"/>
         </div>
       </div>
     );

@@ -3,17 +3,48 @@ body {
 }
 
 .searchBar {
-  width: 900px;
-  border: 3px solid red;
+
+  width: 100vw;
+  border: 3px solid whitesmoke;
   display: flex;
   align-items: left;
+  justify-content: center;
 
 }
 
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+.centerBar {
+  display: flex;
+  justify-content: center;
+}
+
+.Textheader {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  background-color: whitesmoke;
+  animation-name: example;
+  animation-duration: 4s;
+  color: gold;
+}
+
+@keyframes example {
+  from {background-color: whitesmoke}
+  to {background-color: red;}
+}
+
 .mmy {
   display: flex;
   align-items: left;
+  justify-content: space-evenly;
+
+}
+
+.mmy input {
+  margin: 0px 10px;
 }
 
 .Boarder {
@@ -33,7 +64,3 @@ body {
 
 
 
-.Text {
-
-
-}
